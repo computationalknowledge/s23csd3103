@@ -1,25 +1,17 @@
-var str = "Hello World!";
-console.log(typeof str);
-var num = 123;
-console.log(typeof num);
-var arr = [1, 2, 3, 4, 5];
-console.log(typeof arr);
-var bool = true;
-console.log(typeof bool);
-var date = new Date();
-console.log(typeof date);
-var pi = Math.PI;
-console.log(typeof pi);
+// In this code we have make our own object:
+
 var json = { "name": "John", "age": 30, "city": "New York"}
-console.log(typeof json);
 
 function SayHello(name) {   
-    console.log("Hello " + name);
+    var result;
+    result = "Hello " + name;
+    return result;
 }
-console.log(SayHello("John"));
+
 const person = {
     name: 'John',
-    age: 30
+    age: 30, 
+    hello: SayHello
 };
 
-console.log(person.name + " " + person.age); 
+console.log(person.hello(person.name)); 
